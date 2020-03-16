@@ -24,7 +24,7 @@ class WeatherDetailContainer extends Component {
 
   async componentDidMount() {
     const { cityObj } = this.props;
-    const data = await getWeather(cityObj.coordinates[0], cityObj.coordinates[1]);
+    const { data } = await getWeather(cityObj.coordinates[0], cityObj.coordinates[1]);
     this.setState({ weatherData: data });
   }
 

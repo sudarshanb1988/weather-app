@@ -11,10 +11,12 @@ class PrivateRouteContainer extends Component {
   }
 
   componentDidMount() {
-    const city = localStorage.getItem('city');
-    if (city) {
-      const { history } = this.props;
-      history.push(routesConfig.weatherDetail.replace(':city', city));
+    if (window.location.pathname === routesConfig.root) {
+      const city = localStorage.getItem('city');
+      if (city) {
+        const { history } = this.props;
+        history.push(routesConfig.weatherDetail.replace(':city', city));
+      }
     }
   }
 

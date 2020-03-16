@@ -5,7 +5,6 @@ import ErrorBoundary from 'modules/common/components/ErrorBoundary';
 import { Row, Col, Card } from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner';
 
-
 function WeatherDetailComponent(props) {
   const {
     city,
@@ -47,7 +46,7 @@ function WeatherDetailComponent(props) {
                     <div>
                       <div>
                         <div className="day">{index === 0 ? 'TODAY' : null }</div>
-                        <div className="date">{date}</div>
+                        {index === 0 ? null : <div className="date">{date}</div>}
                       </div>
                       <div>
                         <img alt={`${description}`} src={`https://www.weatherbit.io/static/img/icons/${icon}.png`} />

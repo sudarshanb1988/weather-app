@@ -16,6 +16,7 @@ function getCityObjFromSlug() {
 function WeatherDetailPage() {
   const cityObj = getCityObjFromSlug();
   if (!cityObj) {
+    localStorage.removeItem('city');
     window.location.replace('/');
     return null;
   }

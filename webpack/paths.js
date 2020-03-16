@@ -9,5 +9,5 @@ module.exports = {
   fontsFolder: 'fonts',
   cssFolder: 'css',
   jsFolder: 'js',
-  favicon: path.resolve(__dirname, '../', 'public/assets/images/favicon.png'),
+  favicon: path.resolve(__dirname, '../', 'public/assets/images/favicon.svg'),
 };
