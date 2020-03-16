@@ -1,0 +1,10 @@
+.header {
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration-color : inherit;
+      color: $white;
+    }
+  }
+}

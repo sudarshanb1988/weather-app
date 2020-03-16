@@ -1,0 +1,61 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin         : 0;
+	padding        : 0;
+	border         : 0;
+  font           : inherit;
+  font-size      : 100%;
+	vertical-align : baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+details, header, menu, section {
+	display : block;
+}
+
+body {
+  color       : $text-color-base;
+  font-family : $font-stack-primary;
+  font-size   : 16px;
+  font-weight : 100;
+	line-height : 1;
+}
+
+ol, ul, dl {
+	list-style : none;
+}
+
+blockquote, q {
+	quotes : none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content : '';
+  content : none;
+}
+
+table {
+  border-collapse : collapse;
+  border-spacing  : 0;
+}
+
+/* Accessible Hidden
+   There are times something won't show in the UI but needs to be "shown" to assistive devices.
+   A typical example is "skip links" which are typically hidden until they receive focus. In that
+   case a the links would be hidden visuallhy with .a11y-hidden and when they receive focus, they
+   would appear in the UI visually. The screen readers need to know they're there even when they
+   are not visible.
+*/
+.a11y-hidden {
+  clip      : rect(1px, 1px, 1px, 1px);
+  clip-path : inset(50%);
+  height    : 1px;
+  width     : 1px;
+  margin    : -1px;
+  overflow  : hidden;
+  padding   : 0;
+  position  : absolute;
+}
+
+[aria-hidden] {
+  display : none;
+}

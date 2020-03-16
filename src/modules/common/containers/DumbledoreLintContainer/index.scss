@@ -1,0 +1,54 @@
+.dumbledore-lint-container {
+  font-family: monospace;
+}
+
+.dumbledore-lint-container--header {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+
+  .logo {
+   height: 60px;
+   padding: 20px;
+  }
+}
+
+.dumbledore-lint-container--error-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.dumbledore-lint-container--title {
+  margin: 3vh 0 0;
+  padding: 20px;
+  font-size: 18px;
+  width: 90%;
+  background-color: #ccc;
+}
+
+.dumbledore-lint-container--files {
+  width: 60%;
+  margin: 2vh 0 0;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.dumbledore-lint-container--file-path {
+  text-decoration: underline;
+}
+
+.dumbledore-lint-container--errors {
+  margin: 1vh 0 0;
+}
+
+.dumbledore-lint-container--source {
+  background-color: #ccc;
+}

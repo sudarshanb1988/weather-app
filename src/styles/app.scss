@@ -1,0 +1,62 @@
+@import 'font-family';
+@import 'variables';
+@import 'mixins';
+
+@import "~bootstrap/scss/reboot";
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/custom-forms';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/alert';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/list-group';
+@import '~bootstrap/scss/tooltip';
+@import '~bootstrap/scss/spinners';
+@import 'react-bootstrap-typeahead/css/Typeahead.scss';
+
+@import 'reset';
+
+@import 'utils';
+
+@import '../modules/**/*.scss';
+@import '../pages/**/*.scss';
+
+// Required for bootstrap modal
+.modal-open {
+  [aria-hidden="true"] {
+    display: inherit;
+  }
+}
+
+
+// Headings
+h1, h2 {
+  margin      : 0;
+  font-size   : $font-size-xxlg;
+  font-weight : 500;
+}
+
+h1 {
+  color : $primary;
+}
+
+h2 {
+  color : $black;
+}
+
+h3 {
+  font-weight : 700;
+  color       : $black;
+}
+
+.suspense-spinner-container {
+  margin-top: 15%;
+  text-align: center;
+}

@@ -1,0 +1,5 @@
+./tools/*
+./webpack/*
+./build/*
+./server/*
+**/*.test.js

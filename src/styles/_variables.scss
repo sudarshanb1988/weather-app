@@ -1,0 +1,243 @@
+/* Order of importing bootstrap files affects the value of overridden primary color through out the generated css.
+  Importing variables files after overriding colors using $theme-colors map seems to apply the correct value across all occurrence.
+  Ref: https://stackoverflow.com/a/56450608/11622344
+*/
+
+$primary: rgba(194, 78, 20, 1);
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$enable-caret: false; // Hides default bootstrap caret to use custom styling for caret.
+
+/*******************************/
+
+// Font Stack
+$font-stack-primary: "solis-regular", Verdana, Arial, sans-serif;
+
+// Media sizes
+$mobile-max-size : 823px;
+
+// Base Colors
+$black: rgba(53, 60, 67, 1); // #353C43 (Nothing is #000000!)
+$grey-dark: rgba(
+  121,
+  118,
+  118,
+  1
+); // #797676 Lightest grey on white for text (yes it's still pretty dark)
+$grey-base: rgba(241, 241, 241, 1); // #F1F1F1
+$grey-light: #878787;
+$white: rgba(255, 255, 255, 1); // #FFFFFF
+// $orange-dark: rgba(194, 78, 20, 1); // #C24E14
+$blue-light: rgba(246, 250, 254, 1); // #F6FAFE
+$blue-mid: rgba(20, 136, 194, 1); // #1488C2
+$blue-dark: rgba(54, 95, 121, 1); // #365F79
+$red: rgba(217, 71, 55, 1); // #D94737
+
+// Text Colors
+$text-color-base: $black;
+$text-color-light: $grey-dark;
+$text-color-primary: $primary;
+
+// Wrapper
+$page-wrapper-bg: $grey-light;
+
+$page-wrapper-main-bg: $white;
+$page-wrapper-main-box-shadow: -1px 0 3px rgba(0, 0, 0, 0.15);
+
+// Main section
+$main-bg: $white;
+
+// $main-z-index : 10;
+
+// Text Sizes
+$font-size-really-huge: 3rem; // 48px
+$font-size-huge: 1.375rem; // 22px
+$font-size-xxlg: 1.25rem; // 20px
+$font-size-xlg: 1.125rem; // 18px
+$font-size-lg: 1rem; // 16px
+$font-size-md: 0.875rem; // 14px
+$font-size-sm: 0.75rem; // 12px
+$font-size-xsm: 0.625rem; // 10px I don't think we'll ever use this but, here you go
+
+// Font weights
+$font-weight-regular: 100;
+
+// Links
+$link-text-default: $primary;;
+$link-text-primary: $blue-dark;
+
+// Icon
+$icon-size-xs: 4px;
+$icon-size-sm: 8px;
+$icon-size-md: 16px;
+$icon-size-lg: 32px;
+$icon-size-xl: 64px;
+
+$icon-color-default: $text-color-base;
+$icon-color-primary: $primary;
+$icon-color-white: $white;
+
+// Buttons
+$btn-border: none;
+$btn-padding: 12px 8px 11px 8px;
+$btn-border-radius: 4px;
+$btn-font-family: solis-regular;
+$btn-font-size: $font-size-md;
+$btn-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+$btn-font-weight: $font-weight-regular;
+
+$btn-bg-default: $grey-light;
+$btn-default-color: $primary;;
+
+$btn-primary-bg: $primary;;
+$btn-primary-color: $white;
+
+$btn-secondary-bg: $grey-light;
+$btn-secondary-color: $primary;;
+
+$btn-link-bg: transparent;
+$btn-link-color: $primary;;
+
+// Shadows
+$modal-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+$button-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+$dropdown-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.26);
+
+// Dropdown
+$dropdown-border-radius: 7px;
+
+// Table
+$table-light-row-bg: $white;
+$table-dark-row-bg: $blue-light;
+
+$table-header-border-left: 1px solid white;
+$table-header-padding: 8px 10px;
+$table-header-background-color: $grey-base;
+$table-header-font-size: $font-size-sm;
+$table-header-font-weight: 500;
+$table-header-border-radius: 6px;
+
+$table-data-padding: 12px 10px;
+
+// Inputs
+
+// Default
+
+$input-font-family-default: $font-stack-primary;
+$input-font-weight-default: $font-weight-regular;
+$input-font-size-default: 1em;
+$input-padding-default: 9px 10px;
+$input-color-default: $text-color-base;
+$input-bg-default: $white;
+$input-border-radius-default: 0.25rem;
+$input-border-default: 1px solid rgba(215, 215, 215, 1);
+$input-box-shadow-default: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+$input-color-checked: $primary;;
+
+// Error state
+$input-border-error: 1px solid $primary;;
+$input-box-shadow-error: 0 0 4px $primary;;
+
+// Checkbox
+$checkbox-border: $input-border-default;
+$checkbox-border-radius: 2px;
+$checkbox-box-shadow: $input-box-shadow-default;
+$checkbox-size: 18px;
+
+$checkbox-color-checked: $input-color-checked;
+$checkbox-border-checked: $input-border-default;
+$checkbox-bg-checked: $white;
+$checkbox-box-shadow-checked: $input-box-shadow-default;
+$checkbox-bg-size-checked: 15px 11px;
+
+// Radio
+$radio-border: $input-border-default;
+$radio-border-radius: 50%;
+$radio-box-shadow: $input-box-shadow-default;
+$radio-size: 18px;
+
+$radio-color-checked: $input-color-checked;
+$radio-border-checked: $input-border-default;
+$radio-bg-checked: $white;
+$radio-box-shadow-checked: $input-box-shadow-default;
+$radio-bg-size-checked: 8px;
+
+// Switch
+$switch-border: none;
+$switch-border-radius: 8px;
+$switch-box-shadow: none;
+$switch-bg-default: rgba($grey-dark, 0.3);
+$switch-width: 32px;
+$switch-height: 16px;
+$switch-input-gutter: 8px;
+
+$switch-indicator-border-radius: 50%;
+$switch-indicator-width: 20px;
+$switch-indicator-height: 20px;
+$switch-indicator-overflow: 2px; // TODO: Change this after getting exact values
+$switch-indicator-color: $white;
+$switch-indicator-border: none;
+$switch-indicator-box-shadow: $button-shadow;
+
+$switch-bg-checked: $input-color-checked;
+$switch-bg-disabled: $grey-light;
+$switch-bg-checked-disabled: lighten($primary, 30%);
+
+$switch-indicator-color-checked: $white;
+$switch-indicator-border-checked: none;
+$switch-indicator-box-shadow-checked: $button-shadow;
+
+// User Icons
+$user-icon-size-sm: 30px;
+$user-icon-size-md: 60px;
+$user-icon-size-lg: 90px;
+
+// Header
+$header-btn-bg-hover: darken($white, 4%);
+
+$header-start-line-height: 18px;
+$header-start-toggle-width: 18px;
+$header-start-toggle-height: 18px;
+$header-start-toggle-margin: 0 10px 0 0;
+$header-start-toggle-bg-hover: $header-btn-bg-hover;
+$header-start-toggle-icon-size: 18px;
+$header-start-title-margin: 0;
+$header-start-title-line-height: 1rem;
+
+$header-end-margin: 0;
+$header-end-border-radius: 4px;
+$header-end-padding: 0;
+$header-end-line-height: 30px;
+$header-end-text-decoration: none;
+$header-end-font-size: 1.1em;
+$header-end-bg-hover: $header-btn-bg-hover;
+
+// SideNav
+$sideNav-padding-left: 56px;
+
+$sideNav-header-padding-left: $sideNav-padding-left;
+$sideNav-header-padding-top: $sideNav-padding-left;
+
+$sideNav-header-logo-color: $primary;;
+$sideNav-header-logo-size: 34px;
+$sideNav-header-height: 60px;
+
+$sideNav-section-title-padding: 10px 0 10px $sideNav-padding-left;
+$sideNav-section-title-font-size: 1em;
+$sideNav-section-title-font-weight: 500;
+
+$sideNav-link-color: $black;
+$sideNav-link-font-weight: $font-weight-regular;
+$sideNav-link-padding: 10px 15px 10px 70px;
+$sideNav-link-bg-hover: darken($grey-light, 3%);
+
+$sideNav-link-color-active: $link-text-default;
+$sideNav-link-font-weight-active: 500;
+
+// $sideNav-active-link-indicator-z-index : $main-z-index + 1;
+$sideNav-indicator-color: $main-bg;
+
+/*******************************/

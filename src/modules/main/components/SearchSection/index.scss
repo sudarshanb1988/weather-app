@@ -1,0 +1,40 @@
+.search-section {
+  background-image: url('../../public/assets/images//weather-bg.jpg');
+  height: calc(100vh - 48px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  >div {
+    height: 100%;
+    svg {
+      height: 40px;
+      position: absolute;
+      right: 0;
+      top: 35%;
+      left: 25.5%;
+      z-index: 100;
+      @media only screen and (max-width: $mobile-max-size) {
+        display: none;
+      }
+    }
+    .rbt {
+      height: 100%;
+      >div {
+        justify-content: center;
+        align-items: center;
+        >.rbt-input-main {
+          width: 50%;
+          @include vertically-align(30%);
+          height: 58px;
+          padding-left: 20px;
+          @media only screen and (max-width: $mobile-max-size) {
+            width: 85%;
+            padding-left: 10px
+          }
+        }
+      }
+      .rbt-menu > .dropdown-item {
+        height: 35px;
+      }
+    }
+  }
+}

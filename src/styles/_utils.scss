@@ -1,0 +1,121 @@
+.nopadding {
+  padding: 0;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.modal {
+  .modal-title {
+    font-family: $font-stack-primary;
+    font-size: $font-size-xxlg;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $primary;
+  }
+  .modal-content {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .modal-header {
+    margin-bottom: 20px;
+    .closeIcon {
+      width: 16px;
+    }
+  }
+  .modal-header, .modal-footer, .modal-body {
+    border: 0;
+    padding: 0;
+  }
+}
+.dot-pulse {
+  >div {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: $primary;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
+    animation: bouncedelay 1s infinite ease-in-out both;
+  }
+  .one {
+    -webkit-animation-delay: -0.48s;
+    animation-delay: -0.48s;
+  }
+  .two {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  .three {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+}
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform:scale(0)
+  }
+  40%{
+    -webkit-transform:scale(1)
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform:scale(0);
+    transform:scale(0)
+  }
+  40% {
+    transform:scale(1);
+    -webkit-transform:scale(1)
+  }
+}
+.dropzone-container {
+  display: table;
+  width: 100%;
+  &.dropping {
+    >* {
+      border-color: $primary;
+    }
+  }
+  >* {
+    height: 180px;
+    border-radius: 10px;
+    border: dashed 2px #cccccc;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: $font-size-md;
+    .text {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.tableBodyScroll tbody {
+  display: block;
+  max-height: 56vh;
+  overflow-y: scroll;
+}
+
+.tableBodyScroll thead,
+.tableBodyScroll tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.tableBodyScroll thead th td,
+.tableBodyScroll tbody tr td {
+  word-break: break-word;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+  and (orientation: landscape) {
+    .tableBodyScroll tbody {
+      max-height: 50vh;
+    }
+  }

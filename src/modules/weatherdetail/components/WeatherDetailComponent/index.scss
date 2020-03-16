@@ -1,0 +1,67 @@
+.weather-detail-component {
+  padding: 20px;
+  .suspense-spinner-container {
+    margin: 15% auto;
+  }
+  .row {
+    @media only screen and (max-width: $mobile-max-size) and (orientation: landscape) {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+  }
+  .card {
+    padding: 20px 8px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 1px;
+    min-height: 380px;
+    margin: 10px 0;
+    &.today {
+      border-top: solid 4px $primary;
+    }
+    .day {
+      font-family: 'solis-medium';
+      line-height: 24px;
+    }
+    .date {
+      color: $grey-light;
+    }
+    .temp-section {
+      margin: 20px 0;
+      font-size: $font-size-huge;
+      .high {
+        font-size: $font-size-really-huge;
+        margin-right: 5px;
+      }
+      .demark {
+        @media only screen and (max-width: $mobile-max-size) and (orientation: landscape) {
+          display: none;
+        }
+      }
+      .low {
+        color: $grey-light;
+        margin-left: 5px;
+        @media only screen and (max-width: $mobile-max-size) and (orientation: landscape) {
+          display: block;
+          margin-top: 5px;
+        }
+      }
+    }
+    .description {
+      font-size: $font-size-huge;
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      width: 90%;
+    }
+  }
+  .title {
+    font-size: $font-size-really-huge;
+    padding: 20px;
+    @media only screen and (max-width: $mobile-max-size) {
+      font-size: $font-size-huge;
+    }
+    text-align: center;
+  }
+}
