@@ -19,7 +19,7 @@
       "git add"
     ]
   },
-  "repository": "",
+  "repository": "https://github.com/sudarshanb1988/weather-app",
   "author": "sudarshanb1988",
   "license": "ISC",
   "private": false,
