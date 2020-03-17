@@ -1,5 +1,9 @@
 import 'whatwg-fetch';
 import { get } from 'utils/api.js';
+import {
+  RAPID_API_HOST,
+  RAPID_API_KEY
+} from 'utils/constants.js';
 // import json from 'modules/common/apis/fakeWeather';
 
 export const getWeather = (lat, lon) => {
@@ -9,8 +13,8 @@ export const getWeather = (lat, lon) => {
     null,
     {},
     {
-      'x-rapidapi-host': 'weatherbit-v1-mashape.p.rapidapi.com',
-      'x-rapidapi-key': '5cea3bdc9fmsh641ca45ac6c3dfdp18e11cjsn2ee40a5b58bd'
+      'x-rapidapi-host': RAPID_API_HOST,
+      'x-rapidapi-key': RAPID_API_KEY
     }
   );
   // return new Promise((res) => {

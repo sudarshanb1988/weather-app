@@ -1,0 +1,22 @@
+.four-not-four-page {
+  line-height: 2;
+  height: 60%;
+  width: 100%;
+  display: table;
+  text-align: center;
+  .wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    h1 {
+      font-weight: $font-size-really-huge;
+      font-weight: 500;
+      color: inherit;
+    }
+    h3 {
+      font-weight: 500;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}

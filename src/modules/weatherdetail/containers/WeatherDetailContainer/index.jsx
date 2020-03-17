@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import ErrorBoundary from 'modules/common/components/ErrorBoundary';
 import WeatherDetailComponent from 'modules/weatherdetail/components/WeatherDetailComponent';
 
+import Alert from 'react-bootstrap/Alert';
+
 import { getWeather } from 'modules/weatherdetail/apis';
 
 class WeatherDetailContainer extends Component {
@@ -18,18 +20,34 @@ class WeatherDetailContainer extends Component {
 
   state = {
     weatherData: {
-      data: []
+      data: [],
+      error: false
     }
   }
 
   async componentDidMount() {
     const { cityObj } = this.props;
-    const { data } = await getWeather(cityObj.coordinates[0], cityObj.coordinates[1]);
-    this.setState({ weatherData: data });
+    try {
+      const { data } = await getWeather(cityObj.coordinates[0], cityObj.coordinates[1]);
+      this.setState({ weatherData: data, error: false });
+    } catch (e) {
+      this.setState({ error: true });
+    }
   }
 
   getWeatherFormattedData() {
-    const { weatherData } = this.state;
+    const { weatherData, error } = this.state;
+    if (error) {
+      return (
+        <ErrorBoundary>
+          <div className="error-alert-container">
+            <Alert variant="danger">
+              Failed to fetch data from server
+            </Alert>
+          </div>
+        </ErrorBoundary>
+      );
+    }
     if (!weatherData.data) return null;
 
     return weatherData.data.map(dt => ({
